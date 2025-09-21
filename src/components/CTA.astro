@@ -1,6 +1,7 @@
 ---
 import { t, getLocalePath } from "i18n:astro";
 import { getOptimizedImage } from "@utils/utils";
+import client from "@data/client.json";
 // Import and optimize images
 import mobileImage from "@assets/images/CTA/cta.jpg"
 import desktopImage from "@assets/images/CTA/cta.jpg"
@@ -20,7 +21,7 @@ const optimizedDesktopImage = await getOptimizedImage(desktopImage);
             <p class="cs-text">
                 {t("common:cta.text")}
             </p>
-            <a href={getLocalePath("/contact")} class="cs-button-solid">{t("common:cta.cta")}</a>
+            <a href={client.bookingLink} target="_blank" rel="noopener" class="cs-button-solid">{t("common:cta.cta")}</a>
         </div>
     </div>
     <!-- Background Image-->

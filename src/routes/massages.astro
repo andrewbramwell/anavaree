@@ -27,8 +27,8 @@ const optimizedMassageImage6 = await getOptimizedImage(massageImage6);
 ---
 
 <BaseLayout
-  title={t("massages:layout.title")}
-  description={t("massages:layout.description")}
+  title={t("massages:landing")}
+  description={t("massages:description")}
   preloadedImage={optimizedImage}
 >
 
@@ -52,7 +52,7 @@ const optimizedMassageImage6 = await getOptimizedImage(massageImage6);
         </div>
         <ul class="cs-card-group">
             <li class="cs-item">
-                <a href={getLocalePath("/contact")} class="cs-link">
+                <a href={client.bookingLink} target="_blank" rel="noopener" class="cs-link">
                     <picture class="cs-picture" aria-hidden="true">
                         <source media="(max-width: 600px)" srcset={optimizedMassageImage1.src}>
                         <source media="(min-width: 601px)" srcset={optimizedMassageImage1.src}>
@@ -75,7 +75,7 @@ const optimizedMassageImage6 = await getOptimizedImage(massageImage6);
                 </a>
             </li>
             <li class="cs-item">
-                <a href={getLocalePath("/contact")} class="cs-link">
+                <a href={client.bookingLink} target="_blank" rel="noopener" class="cs-link">
                     <picture class="cs-picture" aria-hidden="true">
                         <source media="(max-width: 600px)" srcset={optimizedMassageImage2.src}>
                         <source media="(min-width: 601px)" srcset={optimizedMassageImage2.src}>
@@ -95,7 +95,7 @@ const optimizedMassageImage6 = await getOptimizedImage(massageImage6);
                 </a>
             </li>
             <li class="cs-item">
-                <a href={getLocalePath("/contact")} class="cs-link">
+                <a href={client.bookingLink} target="_blank" rel="noopener" class="cs-link">
                     <picture class="cs-picture" aria-hidden="true">
                         <source media="(max-width: 600px)" srcset={optimizedMassageImage3.src}>
                         <source media="(min-width: 601px)" srcset={optimizedMassageImage3.src}>
@@ -118,7 +118,7 @@ const optimizedMassageImage6 = await getOptimizedImage(massageImage6);
                 </a>
             </li>
             <li class="cs-item">
-                <a href={getLocalePath("/contact")} class="cs-link">
+                <a href={client.bookingLink} target="_blank" rel="noopener" class="cs-link">
                     <picture class="cs-picture" aria-hidden="true">
                         <source media="(max-width: 600px)" srcset={optimizedMassageImage4.src}>
                         <source media="(min-width: 601px)" srcset={optimizedMassageImage4.src}>
@@ -141,7 +141,7 @@ const optimizedMassageImage6 = await getOptimizedImage(massageImage6);
                 </a>
             </li>
             <li class="cs-item">
-                <a href={getLocalePath("/contact")} class="cs-link">
+                <a href={client.bookingLink} target="_blank" rel="noopener" class="cs-link">
                     <picture class="cs-picture" aria-hidden="true">
                         <source media="(max-width: 600px)" srcset={optimizedMassageImage5.src}>
                         <source media="(min-width: 601px)" srcset={optimizedMassageImage5.src}>
@@ -164,7 +164,7 @@ const optimizedMassageImage6 = await getOptimizedImage(massageImage6);
                 </a>
             </li>
             <li class="cs-item">
-                <a href={getLocalePath("/contact")} class="cs-link">
+                <a href={client.bookingLink} target="_blank" rel="noopener" class="cs-link">
                     <picture class="cs-picture" aria-hidden="true">
                         <source media="(max-width: 600px)" srcset={optimizedMassageImage6.src}>
                         <source media="(min-width: 601px)" srcset={optimizedMassageImage6.src}>
@@ -187,7 +187,7 @@ const optimizedMassageImage6 = await getOptimizedImage(massageImage6);
                 </a>
             </li>
         </ul>
-        <a href={getLocalePath("/contact")} class="cs-button-solid">{t("massages:services.cta")}</a>
+        <a href={client.bookingLink} target="_blank" rel="noopener" class="cs-button-solid">{t("massages:services.cta")}</a>
     </div>
 </section>
 

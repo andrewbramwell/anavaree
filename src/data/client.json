@@ -2,7 +2,9 @@
 	"name": "Anavaree Thai Massage",
 	"email": "anavareemassage@gmail.com",
 	"phoneForTel": "+4915202828999",
-	"phoneFormatted": "49 1520 2828999",
+	"phoneFormatted": "+49 1520 282 8999",
+	"openingHours": "",
+	"bookingLink": "https://anavareethaimassage.setmore.com/",
 	"address": {
 		"lineOne": "Brandenburgische Str. 74",
 		"lineTwo": "Wilmersdorf",

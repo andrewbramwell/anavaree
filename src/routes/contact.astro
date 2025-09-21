@@ -12,8 +12,8 @@ const optimizedImage = await getOptimizedImage(landingImage)
 
 <BaseLayout
   title={t("contact:landing")}
-  description="Meta description for the page"
-  preloadedImage = {optimizedImage}
+  description={t("contact:description")}
+  preloadedImage={optimizedImage}
 >
   <!-- ============================================ -->
   <!--                    LANDING                   -->
@@ -45,11 +45,11 @@ const optimizedImage = await getOptimizedImage(landingImage)
                 </li>
                 <li class="cs-li">
                     <picture class="cs-icon-wrapper">
-                        <img aria-hidden="true" src="/assets/svgs/clock.svg" alt="email icon" class="cs-icon" width="40" height="40" decoding="async">
+                        <img aria-hidden="true" src="/assets/svgs/clock.svg" alt="hours icon" class="cs-icon" width="40" height="40" decoding="async">
                     </picture>
                     <div class="cs-flex-group">
-                        <span class="cs-header">{t("contact:info.email.label")}</span>
-                        <a href={`mailto:${client.email}`} class="cs-link">{client.email}</a>
+                        <span class="cs-header">{t("contact:info.hours.label")}</span>
+                        <span class="cs-link">{t("contact:info.hours.value")}</span>
                     </div>
                 </li>
                 <li class="cs-li">
@@ -58,7 +58,7 @@ const optimizedImage = await getOptimizedImage(landingImage)
                     </picture>
                     <div class="cs-flex-group">
                         <span class="cs-header">{t("contact:info.address.label")}</span>
-                        <a href={client.address.mapLink} class="cs-link">
+                        <a href={client.address.mapLink} target="_blank" rel="noopener" class="cs-link">
                             {client.address.lineOne}, {client.address.lineTwo}, {client.address.city} {client.address.state} {client.address.zip}
                         </a>
                     </div>
@@ -66,7 +66,7 @@ const optimizedImage = await getOptimizedImage(landingImage)
             </ul>
         </div>
         <!--Form-->
-        <form class="cs-form" id="cs-form-1403" name="Contact Form" method="post">
+        <form class="cs-form" id="cs-form-1403" name="Contact Form" method="post" data-netlify="true"><input type='hidden' name='form-name' value='Contact Form' />
             <h3 class="cs-h3">{t("contact:form.title")}</h3>
             <label class="cs-label">
                 {t("contact:form.name")}

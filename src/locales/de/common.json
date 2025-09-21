@@ -23,6 +23,7 @@
     },
     "about-page": {
         "landing": "Über uns",
+        "description": "Lernen Sie Khun Pui kennen, zertifizierte Thai-Massage-Therapeutin der Bangkoker Wat Po Schule. Familienpraxis in Wilmersdorf mit 20+ Jahren Erfahrung.",
         "topper": "Unsere Geschichte",
         "title": "Authentische Thai-Heilkunst im Herzen Berlins",
         "p-1": "Khun Puis Weg begann in Nordostthailand, wo sie ihre Leidenschaft für traditionelle Heilkünste entdeckte. Nach ihrem Umzug nach Berlin im Jahr 2000 kehrte sie nach Thailand zurück, um sich an der renommierten Wat Po Traditional Medical School in Bangkok ausbilden zu lassen - dem Geburtsort der traditionellen Thai-Massage. Diese intensive Ausbildung vermittelte ihr authentische Techniken, die über Generationen von thailändischen Heilern weitergegeben wurden.",
@@ -49,20 +50,20 @@
         }
     },
     "footer": {
-        "information": "Information",
-        "services": "Services",
-        "contact": "Contact",
-        "click": "Click to email",
-        "p": "Extra content if you need it, if not you can delete this whole p tag. I usually do.",
-        "credit": "Designed and Hand Coded by "
+        "information": "Informationen",
+        "services": "Behandlungen",
+        "contact": "Kontakt",
+        "click": "Klicken zum E-Mail senden",
+        "p": "Zusätzlicher Inhalt falls benötigt, ansonsten können Sie diesen ganzen p-Tag löschen. Mache ich normalerweise auch.",
+        "credit": "Entworfen und Hand-Codiert von "
     },
     "notFound": {
-        "pageNotFound": "404 - The page you're looking for does not exist.",
-        "linkText": "Back to homepage"
+        "pageNotFound": "404 - Die gesuchte Seite existiert nicht.",
+        "linkText": "Zurück zur Startseite"
     },
-    "skipLink": "Click To Skip To Main Content",
+    "skipLink": "Klicken um zum Hauptinhalt zu springen",
     "pagination": {
-        "previous": "Prev",
-        "next": "Next"
+        "previous": "Zurück",
+        "next": "Weiter"
     }
 }

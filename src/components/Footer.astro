@@ -57,9 +57,6 @@ const currentYear = getCurrentYear();
               {client.phoneFormatted}
             </a>
           </li>
-          <li>
-            <a href={`mailto:${client.email}`}>{t("footer.click")}</a>
-          </li>
         </ul>
       </div>
     </section>
@@ -67,7 +64,7 @@ const currentYear = getCurrentYear();
 
   <section class="credit">
     <span>{t("footer.credit")}</span>
-    <a href={getLocalePath("/")} target="_blank" rel="noopener">Your Company Name</a>
+    <a href="https://splendidsites.com/" target="_blank" rel="noopener">Splendid Sites</a>
     <span class="copyright"> Copyright {currentYear}</span>
   </section>
 </footer>

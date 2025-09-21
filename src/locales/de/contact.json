@@ -1,4 +1,5 @@
 {
+    "description": "Kontakt zu Anavaree Thai Massage in Wilmersdorf, Berlin. Buchen Sie authentische Thai-Behandlungen bei zertifizierter Therapeutin Khun Pui.",
     "landing": "Kontakt",
     "topper": "Kontakt",
     "title": "Kontaktieren Sie Uns",
@@ -7,8 +8,9 @@
         "phone": {
             "label": "Telefon"
         },
-        "email": {
-            "label": "E-Mail"
+        "hours": {
+            "label": "Öffnungszeiten",
+            "value": "Mo - So: 10:00 - 20:00"
         },
         "address": {
             "label": "Adresse"

@@ -3,6 +3,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import CTA from "@components/CTA.astro";
 import { getLocalePath, t } from "i18n:astro";
 import { getOptimizedImage } from "@utils/utils";
+import client from "@data/client.json";
 
 // Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Hero (for rendering)
 import landingImage from "@assets/images/hero.jpg"; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
@@ -80,7 +81,7 @@ const optimizedFaqImage = await getOptimizedImage(faqImage);
             <p class="cs-text">
                 {t("home:hero.p1")}
             </p>
-            <a href={getLocalePath("/contact")} class="cs-button-solid">{t("home:hero.cta1")}</a>
+            <a href={client.bookingLink} target="_blank" rel="noopener" class="cs-button-solid">{t("home:hero.cta1")}</a>
         </div>
         <picture class="cs-background">
             <!--Mobile Image-->
@@ -106,7 +107,7 @@ const optimizedFaqImage = await getOptimizedImage(faqImage);
         </div>
         <ul class="cs-card-group">
             <li class="cs-item">
-                <a href={getLocalePath("/services")} class="cs-link">
+                <a href={client.bookingLink} target="_blank" rel="noopener" class="cs-link">
                     <picture class="cs-picture" aria-hidden="true">
                         <source media="(max-width: 600px)" srcset={optimizedMassageImage1.src}>
                         <source media="(min-width: 601px)" srcset={optimizedMassageImage1.src}>
@@ -129,7 +130,7 @@ const optimizedFaqImage = await getOptimizedImage(faqImage);
                 </a>
             </li>
             <li class="cs-item">
-                <a href={getLocalePath("/services")} class="cs-link">
+                <a href={client.bookingLink} target="_blank" rel="noopener" class="cs-link">
                     <picture class="cs-picture" aria-hidden="true">
                         <source media="(max-width: 600px)" srcset={optimizedMassageImage2.src}>
                         <source media="(min-width: 601px)" srcset={optimizedMassageImage2.src}>
@@ -149,7 +150,7 @@ const optimizedFaqImage = await getOptimizedImage(faqImage);
                 </a>
             </li>
             <li class="cs-item">
-                <a href={getLocalePath("/services")} class="cs-link">
+                <a href={client.bookingLink} target="_blank" rel="noopener" class="cs-link">
                      <picture class="cs-picture" aria-hidden="true">
                         <source media="(max-width: 600px)" srcset={optimizedMassageImage3.src}>
                         <source media="(min-width: 601px)" srcset={optimizedMassageImage3.src}>
@@ -172,7 +173,7 @@ const optimizedFaqImage = await getOptimizedImage(faqImage);
                 </a>
             </li>
         </ul>
-        <a href={getLocalePath("/services")} class="cs-button-solid">{t("home:services.cta")}</a>
+        <a href={getLocalePath("/massages")} class="cs-button-solid">{t("home:services.cta")}</a>
     </div>
 </section>
 
@@ -292,7 +293,7 @@ const optimizedFaqImage = await getOptimizedImage(faqImage);
                 <span class="cs-spacer"></span>
                 {t("home:sideBySide.text2")}
             </p>
-            <a href={getLocalePath("/contact")} class="cs-button-solid">{t("home:sideBySide.cta")}</a>
+            <a href={getLocalePath("/about")} class="cs-button-solid">{t("home:sideBySide.cta")}</a>
         </div>
     </div>
 </section>
@@ -424,12 +425,13 @@ const optimizedFaqImage = await getOptimizedImage(faqImage);
 
 <script>
 const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
-        for (const item of faqItems) {
-            const onClick = () => {
-            item.classList.toggle('active')
-        }
-        item.addEventListener('click', onClick)
-        }
+for (const item of faqItems) {
+    const button = item.querySelector('.cs-button');
+    const onClick = () => {
+        item.classList.toggle('active');
+    }
+    button.addEventListener('click', onClick);
+}
 </script>
 
 
