@@ -8,26 +8,29 @@ export default defineConfig({
   integrations: [
     icon(),
     i18n({
-      defaultLocale: "en",
-      locales: ["fr", "en"],
+      defaultLocale: "de",
+      locales: ["de", "en"],
       client: {
         data: true,
         paths: true,
       },
       // used to localize the routes
       pages: {
-				"/about": {
-					fr: "/a-propos",
-				}
-			},
+        "/about": {
+          en: "/about",
+        },
+        "/massages": {
+          en: "/massages",
+        }
+      },
     }),
     sitemap({
       i18n: {
-        defaultLocale: 'en', // All urls that don't contain `es` or `fr` after `"https://www.yourwebsite.com/"` will be treated as default locale, i.e. `en`
+        defaultLocale: 'de', // All urls that don't contain `en` after "https://www.yourwebsite.com/" will be treated as default locale, i.e. `de`
         locales: {
           // key/value pairs of all languages supported
-          en: 'en-US', // The `defaultLocale` value must be present in `locales` keys
-          fr: 'fr-FR',
+          de: 'de-DE', // The `defaultLocale` value must be present in `locales` keys
+          en: 'en-US',
         },
       },
     }),

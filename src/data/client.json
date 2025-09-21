@@ -1,15 +1,15 @@
 {
-	"name": "Code Stitch Web Designs",
-	"email": "help@codestitch.app",
-	"phoneForTel": "555-779-4407",
-	"phoneFormatted": "(555) 779-4407",
+	"name": "Anavaree Thai Massage",
+	"email": "anavareemassage@gmail.com",
+	"phoneForTel": "+4915202828999",
+	"phoneFormatted": "49 1520 2828999",
 	"address": {
-		"lineOne": "First Address Line",
-		"lineTwo": "Second Address Line",
-		"city": "Denver",
-		"state": "CO",
-		"zip": "80206",
-		"mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+		"lineOne": "Brandenburgische Str. 74",
+		"lineTwo": "Wilmersdorf",
+		"city": "Berlin",
+		"state": "",
+		"zip": "10713",
+		"mapLink": "https://maps.app.goo.gl/QFfiUMEEPJZKKp3X6"
 	},
 	"domain": "www.codestitch.app"
 }

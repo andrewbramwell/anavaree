@@ -1,0 +1,39 @@
+{
+    "landing": "Massagen",
+    "layout": {
+        "title": "Traditionelle Thai-Massage Therapie",
+        "description": "Erleben Sie traditionelle Heilbehandlungen, die Ihr Gleichgewicht wiederherstellen, Verspannungen lösen und Körper und Geist revitalisieren."
+    },
+    "services": {
+        "topper": "Unsere Behandlungen",
+        "title": "Traditionelle Thai-Massage Anwendungen",
+        "text": "Entdecken Sie unser Spektrum authentischer Thai-Massage Therapien, jede sorgfältig entwickelt, um Ihre individuellen Wellness-Bedürfnisse zu erfüllen und tiefe Entspannung sowie natürliche Heilung zu fördern.",
+        "items": [
+            {
+                "heading": "Rücken-, Nacken- & Schultermassage",
+                "p": "Lösen Sie Verspannungen genau dort, wo Sie sie spüren - mit unserer therapeutischen Ölmassage für Nacken, Schultern und Rücken. Besonders wohltuend bei Stress durch schweres Heben, Schmerzen vom Schulter- bis Nackenbereich oder Verspannungen im Schulterblatt."
+            },
+            {
+                "heading": "Fußreflexzonen-Massage",
+                "p": "Spüren Sie die Heilkraft der Reflexzonenmassage mit unserer spezialisierten Behandlung mittels traditioneller Holzwerkzeuge. Wir stimulieren gezielt Reflexpunkte von den Füßen bis zu den Knien und lindern Fußschmerzen, Schwellungen oder Kniebeschwerden."
+            },
+            {
+                "heading": "Traditionelle Thai-Massage",
+                "p": "Genießen Sie unsere charakteristische Thai-Massage ohne Öl, die mit Energieleitbahn-Arbeit für tiefe Entspannung beginnt. Ihr Therapeut konzentriert sich auf Ihre persönlichen Problemzonen - ideal für Stressabbau und ganzheitliches Wohlbefinden."
+            },
+            {
+                "heading": "Hot Stone Massage",
+                "p": "Lassen Sie Verspannungen mit unserer wohltuenden Heißstein-Therapie dahinschmelzen. Wir verwenden sorgfältig erwärmte Lavasteine bei optimaler Temperatur, um Entspannung zu verstärken und die natürliche Heilung zu fördern sowie Giftstoffe zu lösen."
+            },
+            {
+                "heading": "Thai Solution Massage",
+                "p": "Erleben Sie gezielte therapeutische Behandlung durch traditionelle Druckpunkt-Therapie nach bewährten Prinzipien. Diese Ganzkörperbehandlung vom Kopf bis zu den Zehen wirkt besonders effektiv bei chronischen Beschwerden wie Tennisarm, Knöchelverstauchungen und Knieschmerzen."
+            },
+            {
+                "heading": "Thai Ayuwattana Massage",
+                "p": "Pflegen Sie Ihr Wohlbefinden nachhaltig mit unserer spezialisierten therapeutischen Massage für kontinuierliche Gesundheitsfürsorge. Diese Behandlung ergänzt perfekt unsere Thai Solution Massage und fokussiert auf langfristige Wellness und dauerhafte therapeutische Betreuung."
+            }
+        ],
+        "cta": "Termin Buchen"
+    }
+}

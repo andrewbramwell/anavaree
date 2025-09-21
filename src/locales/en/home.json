@@ -4,48 +4,87 @@
 		"description": "Meta description for the page"
 	},
 	"hero": {
-		"topper": "Advanced Kit",
-		"title": {
-			"1": "Advanced Astro v5",
-			"2": "i18n"
-		},
-		"p1": "This advanced kit includes a pre-configured Astro environment, which allows for repeated components, centralized data and greater room to scale as your clients grow. This kit is specially designed for customers who want a multi-language site, and is therefore configured with Astro's internationalization tools (i18n) for two languages: English and French.",
-		"p2": "This kit is powered by astrolicious/i18n, which is now unmaintained. The package, and this kit, should still work, but be extra careful when updating Astro versions.",
-		"cta1": "Explore More",
-		"cta2": "Get in touch"
-	},
-	"services": [
-		{
-			"heading": "Service 1",
-			"p": "Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences."
-		},
-		{
-			"heading": "Service 2",
-			"p": "Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences."
-		},
-		{
-			"heading": "Service 3",
-			"p": "Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences."
-		}
-	],
-	"about": {
-		"topper": "About Us",
-		"title": "About Company Title",
-		"p1": "Our company was created In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.",
-		"p2": "We believe that In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.",
-		"p3": "It's important In consequat tincidunt turpis sit amet imperdiet.",
-		"rank": "CEO-Founder",
-		"cta": "More about us"
-	},
-	"extra": {
-		"topper": "SEO Ranking",
-		"title": "Talk about a main service keyword",
-		"p1": "Our main service In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.",
-		"p2": "Research shows that In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per."
-	},
-	"portfolio": {
-		"topper": "Our Portfolio",
-		"title": "Et orci volutpat, back up generator installations",
-		"cta": "View Our Products"
-	}
+        "topper": "Authentic Healing",
+        "title": {
+            "1": "Traditional Thai Massage in Wilmersdorf, Berlin"
+        },
+        "p1": "Welcome to Anavaree Thai Massage, where over 20 years of authentic Thai healing tradition meets personalized care in Berlin. Our certified therapist Khun Pui brings genuine techniques from Thailand's renowned Wat Po school to help you find relief from pain, stress, and tension through time-honored therapeutic massage.",
+        "cta1": "Book Your Treatment"
+    },
+	"services": {
+        "topper": "Popular Treatments",
+        "title": "Berlin's Favorite Thai Massage Therapies",
+        "text": "From targeted pain relief to complete relaxation, these authentic Thai massage treatments are chosen by our clients for their proven therapeutic benefits.",
+        "items": [
+            {
+                "heading": "Back, Neck & Shoulder Massage",
+                "p": "Target tension where you need it most with our therapeutic oil massage focusing on your neck, shoulders, and back. Perfect for relieving stress from heavy lifting, shoulder-to-neck pain, or tightness in the shoulder blade area."
+            },
+            {
+                "heading": "Foot Reflexology Massage",
+                "p": "Experience the healing power of reflexology with our specialized treatment using traditional wooden tools. We apply targeted pressure to reflex points from your feet to knees, providing relief for foot pain, swelling, or knee discomfort."
+            },
+            {
+                "heading": "Traditional Thai Massage",
+                "p": "Enjoy our signature oil-free Thai massage, beginning with energy line work to promote deep relaxation. Your therapist will focus on your specific areas of concern, making this ideal for stress relief and overall wellness."
+            }
+        ],
+        "cta": "View All Treatments"
+    },
+	"whyChoose": {
+        "topper": "Why Choose Us",
+        "title": "Why Anavaree Thai Massage?",
+        "text": "Experience the difference that authentic training, personalized care, and genuine Thai heritage make in your healing journey. At Anavaree Thai Massage, we combine traditional techniques passed down through generations with modern therapeutic understanding to deliver results that go beyond ordinary massage. Our family-run approach ensures every client receives individual attention in a welcoming, professional environment.",
+        "items": [
+            {
+                "heading": "Personalized Therapeutic Care",
+                "p": "Family-run practice offering thorough consultations, fresh amenities, complimentary Thai tea, and detailed aftercare guidance. Every treatment is tailored to your specific wellness needs."
+            },
+            {
+                "heading": "Certified & Experienced",
+                "p": "Over 20 years of professional experience with authentic certifications from Thailand's most respected massage institutions. Fully insured practice with comprehensive professional liability coverage."
+            },
+            {
+                "heading": "Authentic Thai Heritage",
+                "p": "Khun Pui brings genuine Thai healing traditions from Northeast Thailand, trained at Bangkok's prestigious Wat Po Traditional Medical School - the birthplace of traditional Thai massage."
+            }
+        ]
+    },
+	"sideBySide": {
+        "topper": "Our Story",
+        "title": "Meet Khun Pui & Family",
+        "text1": "From Northeast Thailand to Wilmersdorf, Berlin, Khun Pui's journey began with a passion for traditional healing arts. Trained at Bangkok's prestigious Wat Po Traditional Medical School, she brings over 20 years of authentic Thai massage expertise to our practice.",
+        "text2": "In September 2025, Anavaree Thai Massage was born as a true family enterprise, named after Pui's daughter who inspired her return to therapeutic practice. Today, we operate as a close-knit team dedicated to providing genuine healing through time-honored Thai traditions.",
+        "cta": "Read Our Full Story"
+    },
+	"gallery": {
+        "topper": "Gallery",
+        "title": "Step Inside Anavaree Thai Massage"
+    },
+	"faq": {
+        "topper": "FAQ's",
+        "title": "Frequently Asked Questions",
+        "items": [
+            {
+                "question": "What should I expect during my first visit?",
+                "answer": "Your first visit begins with a thorough consultation to discuss your health history, specific concerns, and treatment goals. We'll explain the chosen treatment and provide all necessary amenities, including disposable undergarments, robes, and slippers. All treatments include complimentary traditional Thai tea and detailed post-massage guidance for optimal benefits."
+            },
+            {
+                "question": "How often should I book treatments?",
+                "answer": "Treatment frequency depends on your individual needs and goals. For general wellness and maintenance, monthly sessions work well. For specific conditions, chronic issues, or pain management, weekly treatments initially may be beneficial. We'll discuss the best schedule during your consultation based on your specific requirements."
+            },
+            {
+                "question": "What qualifications does Khun Pui have?",
+                "answer": "Khun Pui holds extensive certifications, including Thai Traditional Massage from the prestigious Wat Po Traditional Medical School in Bangkok, Thailand. She has over 20 years of professional experience and authentic credentials from Thailand's most respected massage institutions. Our practice is fully insured with comprehensive professional liability coverage."
+            },
+            {
+                "question": "Do you offer parking?",
+                "answer": "Yes, we provide paid street parking directly in front of our practice for your convenience. Additionally, complimentary parking is available on nearby streets in Wilmersdorf. Specific free parking locations will be provided when you book your appointment."
+            },
+            {
+                "question": "What payment methods do you accept?",
+                "answer": "Currently, we accept cash payments only. However, we are planning to introduce card payment options in the near future to provide more convenience for our clients. We recommend bringing cash for your treatment session."
+            }
+        ]
+    }
 }

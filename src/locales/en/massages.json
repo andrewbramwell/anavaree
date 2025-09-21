@@ -1,0 +1,39 @@
+{
+    "landing": "Massages",
+    "layout": {
+        "title": "Authentic Thai Massage Therapy",
+        "description": "Experience traditional healing treatments designed to restore balance, relieve tension, and rejuvenate your body and mind."
+    },
+    "services": {
+        "topper": "Our Treatments",
+        "title": "Traditional Thai Massage Services",
+        "text": "Discover our range of authentic Thai massage therapies, each carefully crafted to address your specific wellness needs and promote deep relaxation and natural healing.",
+        "items": [
+            {
+                "heading": "Back, Neck & Shoulder Massage",
+                "p": "Target tension where you need it most with our therapeutic oil massage focusing on your neck, shoulders, and back. Perfect for relieving stress from heavy lifting, shoulder-to-neck pain, or tightness in the shoulder blade area."
+            },
+            {
+                "heading": "Foot Reflexology Massage",
+                "p": "Experience the healing power of reflexology with our specialized treatment using traditional wooden tools. We apply targeted pressure to reflex points from your feet to knees, providing relief for foot pain, swelling, or knee discomfort."
+            },
+            {
+                "heading": "Traditional Thai Massage",
+                "p": "Enjoy our signature oil-free Thai massage, beginning with energy line work to promote deep relaxation. Your therapist will focus on your specific areas of concern, making this ideal for stress relief and overall wellness."
+            },
+            {
+                "heading": "Hot Stone Massage",
+                "p": "Melt away tension with our soothing hot stone therapy. We use carefully heated lava stones at optimal temperatures to enhance relaxation and promote natural healing, helping to release toxins and restore balance."
+            },
+            {
+                "heading": "Thai Solution Massage",
+                "p": "Experience targeted therapeutic treatment using traditional pressure point therapy principles. This full-body treatment from head to toe is particularly effective for chronic conditions like tennis elbow, ankle sprains, and knee pain."
+            },
+            {
+                "heading": "Thai Ayuwattana Massage",
+                "p": "Maintain your wellness journey with our specialized therapeutic massage designed for ongoing health care. This treatment complements our Thai Solution Massage, focusing on long-term wellness and continuous therapeutic support."
+            }
+        ],
+        "cta": "Book Your Treatment"
+    }
+}

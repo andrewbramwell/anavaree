@@ -8,6 +8,19 @@ import { t } from "i18n:astro";
 import {getOptimizedImage} from "@utils/utils"
 import landingImage from "@assets/images/landing.jpg" // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
 const optimizedImage = await getOptimizedImage(landingImage)
+
+
+
+import { getOptimizedImage } from "@utils/utils";
+
+// Import About section images
+import aboutImage1 from "@assets/images/about1.jpg";
+import galImage1 from "@assets/images/gal1.jpg";
+
+// Optimize About section images
+const optimizedAboutImage1 = await getOptimizedImage(aboutImage1);
+const optimizedGalImage1 = await getOptimizedImage(galImage1);
+
 ---
 
 <BaseLayout
@@ -35,39 +48,39 @@ const optimizedImage = await getOptimizedImage(landingImage)
         <picture class="cs-picture cs-picture1">
           <source
             media="(max-width: 600px)"
-            srcset="/assets/images/cabinets2-m.jpg"
+            srcset={optimizedGalImage1.src}
           />
           <source
             media="(min-width: 601px)"
-            srcset="/assets/images/cabinets2.jpg"
+            srcset={optimizedGalImage1.src}
           />
           <img
             aria-hidden="true"
             decoding="async"
-            src="/assets/images/cabinets2.jpg"
-            alt="cabinets"
+            src={optimizedGalImage1.src}
+            alt="gallery"
             loading="lazy"
-            width="400"
-            height="563"
+            width={optimizedGalImage1.attributes.width}
+            height={optimizedGalImage1.attributes.height}
           />
         </picture>
         <picture class="cs-picture cs-picture2">
           <source
             media="(max-width: 600px)"
-            srcset="/assets/images/construction-m.jpg"
+            srcset={optimizedAboutImage1.src}
           />
           <source
             media="(min-width: 601px)"
-            srcset="/assets/images/construction.jpg"
+            srcset={optimizedAboutImage1.src}
           />
           <img
             aria-hidden="true"
             decoding="async"
-            src="/assets/images/construction.jpg"
-            alt="house"
+            src={optimizedAboutImage1.src}
+            alt="about us"
             loading="lazy"
-            width="400"
-            height="563"
+            width={optimizedAboutImage1.attributes.width}
+            height={optimizedAboutImage1.attributes.height}
           />
         </picture>
       </div>
@@ -81,11 +94,14 @@ const optimizedImage = await getOptimizedImage(landingImage)
         <p class="cs-text">
           {t("about-page.p-2")}
         </p>
+         <p class="cs-text">
+          {t("about-page.p-3")}
+        </p>
         <div class="cs-flex-group">
           <p class="cs-flex-p">
-            {t("about-page.p-3")}
+            {t("about-page.p-4")}
           </p>
-          <span class="cs-name">Justin Time</span>
+          <span class="cs-name">Pui</span>
           <span class="cs-job">{t("about-page.rank")}</span>
           <img
             class="cs-quote-icon"
@@ -100,6 +116,41 @@ const optimizedImage = await getOptimizedImage(landingImage)
       </div>
     </div>
   </section>
+
+<!-- ============================================ -->
+<!--                    Values                    -->
+<!-- ============================================ -->
+
+<section id="services-2371">
+    <div class="cs-container">
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/therapy1.svg" alt="icon" width="120" height="120">
+                <h3 class="cs-h3">{t("common:about-page.ourStory.items.0.heading")}</h3>
+                <p class="cs-item-text">
+                    {t("common:about-page.ourStory.items.0.p")}
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/therapy2.svg" alt="icon" width="120" height="120">
+                <h3 class="cs-h3">{t("common:about-page.ourStory.items.1.heading")}</h3>
+                <p class="cs-item-text">
+                    {t("common:about-page.ourStory.items.1.p")}
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/therapy3.svg" alt="icon" width="120" height="120">
+                <h3 class="cs-h3">{t("common:about-page.ourStory.items.2.heading")}</h3>
+                <p class="cs-item-text">
+                    {t("common:about-page.ourStory.items.2.p")}
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
+
+
   <CTA />
 </BaseLayout>
 
@@ -163,9 +214,6 @@ const optimizedImage = await getOptimizedImage(landingImage)
         width: (414/16em);
         height: (400/16em);
         background-color: #fff;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
-        /* 6px - 12px */
-        border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
         right: 0;
         bottom: 0;
       }
@@ -199,7 +247,7 @@ const optimizedImage = await getOptimizedImage(landingImage)
       .cs-flex-group {
         /* 16px - 32px */
         padding: clamp(1rem, 3vw, 2rem);
-        background-color: #f7f7f7;
+        background-color: var(--sectionColor);
         border-radius: (16/16rem);
         position: relative;
       }
@@ -278,8 +326,6 @@ const optimizedImage = await getOptimizedImage(landingImage)
 
         .cs-picture2 {
           background-color: var(--dark);
-          /* 6px - 12px */
-          border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
         }
 
         .cs-title,
@@ -305,4 +351,124 @@ const optimizedImage = await getOptimizedImage(landingImage)
       }
     }
   }
+
+/*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-2371 {
+        padding: var(--sectionPadding);
+        background-color: var(--sectionColor);
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-card-group {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: (20/16rem);
+        }
+
+        .cs-item {
+            width: 100%;
+            text-align: left;
+            list-style: none;
+            margin: 0;
+            /* 16px - 32px */
+            padding: clamp(1rem, 3vw, 2rem);
+            /* 80px - 140px */
+            padding-top: clamp(5rem, 10vw, 8.75rem);
+            border-radius: (16/16rem);
+            background-color: #fff;
+            /* prevents padding and border from affecting height and width */
+            box-sizing: border-box;
+            grid-column: span 12;
+            grid-row: span 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cs-icon {
+            /* 80px - 120px */
+            height: clamp(5rem, 9vw, 7.5rem);
+            width: auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .cs-h3 {
+            /* 20px - 25px */
+            font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+            line-height: 1.2em;
+            font-weight: bold;
+            text-align: inherit;
+            margin: 0 0 (12/16rem) 0;
+            color: var(--headerColor);
+        }
+
+        .cs-item-text {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            max-width: (450/16rem);
+            margin: 0;
+            padding: 0;
+            color: var(--bodyTextColor);
+        }
+    }
+}
+
+/* Tablet - 700px */
+@media only screen and (min-width: 43.75rem) {
+    #services-2371 {
+        .cs-item {
+            grid-column: span 4;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #services-2371 {
+            background-color: rgba(0, 0, 0, .2);
+
+            .cs-item {
+                background-color: var(--medium);
+            }
+
+            .cs-title,
+            .cs-text,
+            .cs-h3,
+            .cs-item-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+                                
+
+
 </style>
