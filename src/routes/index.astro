@@ -12,11 +12,11 @@ const optimizedLandingImage = await getOptimizedImage(landingImage);
 const optimizedMobileLandingImage = await getOptimizedImage(mobileLandingImage);
 
 // Import and optimize massage service images
-import massageImage1 from "@assets/images/massage1.jpg";
-import massageImage2 from "@assets/images/massage2.jpg";
+import massageImage5 from "@assets/images/massage5.jpg";
+import massageImage6 from "@assets/images/massage6.jpg";
 import massageImage3 from "@assets/images/massage3.jpg";
-const optimizedMassageImage1 = await getOptimizedImage(massageImage1);
-const optimizedMassageImage2 = await getOptimizedImage(massageImage2);
+const optimizedMassageImage5 = await getOptimizedImage(massageImage5);
+const optimizedMassageImage6 = await getOptimizedImage(massageImage6);
 const optimizedMassageImage3 = await getOptimizedImage(massageImage3);
 
 // Import and optimize Why Us section images
@@ -108,20 +108,20 @@ const optimizedFaqImage = await getOptimizedImage(faqImage);
         <ul class="cs-card-group">
             <li class="cs-item">
                 <a href={client.bookingLink} target="_blank" rel="noopener" class="cs-link">
-                    <picture class="cs-picture" aria-hidden="true">
-                        <source media="(max-width: 600px)" srcset={optimizedMassageImage1.src}>
-                        <source media="(min-width: 601px)" srcset={optimizedMassageImage1.src}>
-                        <img loading="lazy" decoding="async" src={optimizedMassageImage1.src} alt="massage therapy" width={optimizedMassageImage1.attributes.width} height={optimizedMassageImage1.attributes.height}>
+                   <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset={optimizedMassageImage5.src}>
+                        <source media="(min-width: 601px)" srcset={optimizedMassageImage5.src}>
+                        <img loading="lazy" decoding="async" src={optimizedMassageImage5.src} alt="massage therapy" width={optimizedMassageImage5.attributes.width} height={optimizedMassageImage5.attributes.height}>
                     </picture>
                     <h3 class="cs-h3">{t("home:services.items.0.heading")}</h3>
-                    <p class="cs-item-text">
-                        <strong>30 Min. €40</strong>
+                     <p class="cs-item-text">
+                        <strong>30 Min. €75</strong>
                     </p>
                     <p class="cs-item-text">
-                        <strong>60 Min. €55</strong>
+                        <strong>60 Min. €140</strong>
                     </p>
                     <p class="cs-item-text">
-                        <strong>90 Min. €80</strong>
+                        <strong>90 Min. €170</strong>
                     </p>
                     <br>
                     <p class="cs-item-text">
@@ -131,17 +131,20 @@ const optimizedFaqImage = await getOptimizedImage(faqImage);
             </li>
             <li class="cs-item">
                 <a href={client.bookingLink} target="_blank" rel="noopener" class="cs-link">
-                    <picture class="cs-picture" aria-hidden="true">
-                        <source media="(max-width: 600px)" srcset={optimizedMassageImage2.src}>
-                        <source media="(min-width: 601px)" srcset={optimizedMassageImage2.src}>
-                        <img loading="lazy" decoding="async" src={optimizedMassageImage2.src} alt="massage therapy" width={optimizedMassageImage2.attributes.width} height={optimizedMassageImage2.attributes.height}>
+                     <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset={optimizedMassageImage6.src}>
+                        <source media="(min-width: 601px)" srcset={optimizedMassageImage6.src}>
+                        <img loading="lazy" decoding="async" src={optimizedMassageImage6.src} alt="massage therapy" width={optimizedMassageImage6.attributes.width} height={optimizedMassageImage6.attributes.height}>
                     </picture>
                     <h3 class="cs-h3">{t("home:services.items.1.heading")}</h3>
-                    <p class="cs-item-text">
-                        <strong>30 Min. €40</strong>
+                     <p class="cs-item-text">
+                        <strong>30 Min. €75</strong>
                     </p>
                     <p class="cs-item-text">
-                        <strong>60 Min. €55</strong>
+                        <strong>60 Min. €140</strong>
+                    </p>
+                    <p class="cs-item-text">
+                        <strong>90 Min. €170</strong>
                     </p>
                     <br>
                     <p class="cs-item-text">
