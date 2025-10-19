@@ -115,13 +115,13 @@ const optimizedFaqImage = await getOptimizedImage(faqImage);
                     </picture>
                     <h3 class="cs-h3">{t("home:services.items.0.heading")}</h3>
                      <p class="cs-item-text">
-                        <strong>60 Min. €140</strong>
+                        <strong>60 Min. <s>€140</s> €99</strong>
                     </p>
                     <p class="cs-item-text">
-                        <strong>90 Min. €170</strong>
+                        <strong>90 Min. <s>€170</s> €155</strong>
                     </p>
                     <p class="cs-item-text">
-                        <strong>120 Min. €280</strong>
+                        <strong>120 Min. <s>€280</s> €250</strong>
                     </p>
                     <br>
                     <p class="cs-item-text">
@@ -138,13 +138,13 @@ const optimizedFaqImage = await getOptimizedImage(faqImage);
                     </picture>
                     <h3 class="cs-h3">{t("home:services.items.1.heading")}</h3>
                      <p class="cs-item-text">
-                        <strong>60 Min. €140</strong>
+                        <strong>60 Min. <s>€140</s> €99</strong>
                     </p>
                     <p class="cs-item-text">
-                        <strong>90 Min. €170</strong>
+                        <strong>90 Min. <s>€170</s> €155</strong>
                     </p>
                     <p class="cs-item-text">
-                        <strong>120 Min. €280</strong>
+                        <strong>120 Min. <s>€280</s> €250</strong>
                     </p>
                     <br>
                     <p class="cs-item-text">
@@ -161,13 +161,13 @@ const optimizedFaqImage = await getOptimizedImage(faqImage);
                     </picture>
                     <h3 class="cs-h3">{t("home:services.items.2.heading")}</h3>
                     <p class="cs-item-text">
-                        <strong>60 Min. €80</strong>
+                        <strong>60 Min. <s>€80</s> €75</strong>
                     </p>
                     <p class="cs-item-text">
-                        <strong>90 Min. €120</strong>
+                        <strong>90 Min. <s>€120</s> €110</strong>
                     </p>
                     <p class="cs-item-text">
-                        <strong>120 Min. €160</strong>
+                        <strong>120 Min. <s>€160</s> €140</strong>
                     </p>
                     <br>
                     <p class="cs-item-text">
@@ -762,6 +762,11 @@ for (const item of faqItems) {
             color: var(--bodyTextColor);
             margin: 0;
             padding: 0 (20/16rem);
+            
+            s {
+                color: #999;
+                text-decoration: line-through;
+            }
         }
     }
 }
