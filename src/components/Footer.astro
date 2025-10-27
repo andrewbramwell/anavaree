@@ -28,7 +28,6 @@ const currentYear = getCurrentYear();
           <li>
             <h2>{t("footer.information")}</h2>
           </li>
-          <!-- Note: `:any` is solely used to stop the TypeScript warnings. It's an upstream issue with the i18n package which does not impact the code. -->
           {
             navData.map((entry: any) => (
               <li>
@@ -36,8 +35,10 @@ const currentYear = getCurrentYear();
               </li>
             ))
           }
+          <li>
+            <a href={getLocalePath("/impressum")}>{t("Impressum")}</a>
+          </li>
         </ul>
-        
         <ul>
           <li>
             <h2>{t("footer.contact")}</h2>
