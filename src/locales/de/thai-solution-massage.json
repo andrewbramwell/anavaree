@@ -1,0 +1,37 @@
+{
+    "description": "Individuelle therapeutische Behandlung auf der Massageliege. Benjapakee-System vereint muskuläre, nervliche, gelenkige und energetische Heilung.",
+    "landing": "Thai Solution Massage",
+    "topper": "Uraltes Wissen",
+    "title": "Die Philosophie der Thai Solution Massage",
+    "p1": "Thai Solution Massage ist eine jahrhundertealte Heilkunst, die nicht auf starren Definitionen oder geschriebenen Theorien beruht, sondern auf dem Wissen, das von Generation zu Generation thailändischer Meister weitergegeben wurde.",
+    "p2": "Nach traditioneller Lehre dienen die Sehnen und Bänder, die verschiedene Körperteile miteinander verbinden, als natürliche Indikatoren. Sie offenbaren individuelle Beschwerden und Ungleichgewichte. Diese \"Linien\" bilden den Schlüssel zum Verständnis des körperlichen Gesundheitszustands und zeigen die wirksamsten therapeutischen Wege auf.",
+    "p3": "Unterhalb dieser Linien verlaufen die Hauptenergiekanäle, in der thailändischen Tradition \"Sen\" genannt. Diese Kanäle bilden das Zentrum des Nervensystems und sind grundlegend für das ganzheitliche Wohlbefinden des Körpers.",
+    "p4": "Durch eine gezielte Massagetechnik mit angemessenem Druck und Körpergewicht können Nerven und tiefliegendes Gewebe stimuliert, tiefe Entspannung gefördert, problematische Körperbereiche zur Regeneration angeregt und das natürliche Gleichgewicht des Körpers wiederhergestellt werden.",
+    "p5": "Unser Ansatz verbindet uraltes Heilwissen mit einem tiefen Verständnis für die individuellen Bedürfnisse jedes Klienten und bietet so eine authentische und persönliche therapeutische Erfahrung.",
+    "items": {
+        "0": {
+            "heading": "Migräne und Spannungskopfschmerzen",
+            "text": "Spezialisierte Techniken zur Lösung von Nacken- und Schädelverspannungen, die Häufigkeit und Intensität von Migräne und stressbedingten Kopfschmerzen deutlich reduzieren."
+        },
+        "1": {
+            "heading": "Tennisellenbogen (Epicondylitis)",
+            "text": "Gezielte Behandlung zur Reduzierung von Sehnenentzündungen im Unterarm und Wiederherstellung schmerzfreier Ellenbogenbeweglichkeit."
+        },
+        "2": {
+            "heading": "Muskelverspannungen und Verhärtungen",
+            "text": "Tiefenwirksame Behandlung zur Lösung chronischer Muskelverhärtungen, Verbesserung der Durchblutung und Wiederherstellung natürlicher Beweglichkeit."
+        },
+        "3": {
+            "heading": "Kniearthrose",
+            "text": "Sanfte Techniken zur Verringerung von Gelenksteifheit, Verbesserung der Beweglichkeit und Linderung von Schmerzen durch Knorpelverschleiß."
+        },
+        "4": {
+            "heading": "Wadenkrämpfe",
+            "text": "Therapeutische Massage zur Entspannung der Wadenmuskulatur, Verbesserung der Durchblutung und Vorbeugung wiederkehrender Krämpfe."
+        },
+        "5": {
+            "heading": "Plantarfasziitis (Fersensporn)",
+            "text": "Spezifische Behandlung zur Reduzierung von Entzündungen des Fußgewölbes, Linderung von Fersenschmerzen und Wiederherstellung der natürlichen Fußfunktion."
+        }
+    }
+}

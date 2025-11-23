@@ -1,0 +1,481 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import client from "@data/client.json";
+import Landing from "@components/Landing.astro";
+import CTA from "@components/CTA.astro";
+import { t } from "i18n:astro";
+
+// Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Landing (for rendering)
+import {getOptimizedImage} from "@utils/utils"
+import landingImage from "@assets/images/landing.jpg"
+const optimizedImage = await getOptimizedImage(landingImage)
+---
+
+<BaseLayout
+  title={t("thai-solution-massage:landing")}
+  description={t("thai-solution-massage:description")}
+  preloadedImage={optimizedImage}
+>
+  <!-- ============================================ -->
+  <!--                    LANDING                   -->
+  <!-- ============================================ -->
+
+  <Landing title={t("thai-solution-massage:landing")} image={optimizedImage}/>
+
+<!-- ============================================ -->
+<!--           Thai Solution Massage              -->
+<!-- ============================================ -->        
+
+<section id="services-1259">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">{t("thai-solution-massage:topper")}</span>
+            <h2 class="cs-title">{t("thai-solution-massage:title")}</h2>
+            <p class="cs-text">{t("thai-solution-massage:p1")}</p><br>
+            <p class="cs-text">{t("thai-solution-massage:p2")}</p><br>
+            <p class="cs-text">{t("thai-solution-massage:p3")}</p><br>
+            <p class="cs-text">{t("thai-solution-massage:p4")}</p><br>
+            <p class="cs-text">{t("thai-solution-massage:p5")}</p>
+        </div>
+        <div class="cs-wrapper">
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/muscular.png">
+                <source media="(min-width: 601px)" srcset="/assets/images/muscular.png">
+                <img loading="lazy" decoding="async" src="/assets/images/muscular.png" alt="Thai massage therapist" width="417" height="468" aria-hidden="true">
+            </picture>
+            <picture class="cs-circle">
+                <source media="(max-width: 1249px)" srcset="/assets/svgs/ellipse2.svg">
+                <source media="(min-width: 1250px)" srcset="/assets/svgs/ellipse2.svg">
+                <img loading="lazy" decoding="async" src="/assets/svgs/ellipse2.svg" alt="circle" width="724" height="665" aria-hidden="true">
+            </picture>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <div class="cs-link">
+                        <picture class="cs-picture">
+                            <img class="cs-icon" src="/assets/svgs/treatments/1.svg" loading="lazy" decoding="async" alt="icon" width="40" height="40" aria-hidden="true">
+                        </picture>
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">{t("thai-solution-massage:items.0.heading")}</h3>
+                            <p class="cs-item-text">{t("thai-solution-massage:items.0.text")}</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-link">
+                        <picture class="cs-picture">
+                            <img class="cs-icon" src="/assets/svgs/treatments/2.svg" loading="lazy" decoding="async" alt="icon" width="40" height="40" aria-hidden="true">
+                        </picture>
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">{t("thai-solution-massage:items.1.heading")}</h3>
+                            <p class="cs-item-text">{t("thai-solution-massage:items.1.text")}</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-link">
+                        <picture class="cs-picture">
+                            <img class="cs-icon" src="/assets/svgs/treatments/3.svg" loading="lazy" decoding="async" alt="icon" width="40" height="40" aria-hidden="true">
+                        </picture>
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">{t("thai-solution-massage:items.2.heading")}</h3>
+                            <p class="cs-item-text">{t("thai-solution-massage:items.2.text")}</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-link">
+                        <picture class="cs-picture">
+                            <img class="cs-icon" src="/assets/svgs/treatments/4.svg" loading="lazy" decoding="async" alt="icon" width="40" height="40" aria-hidden="true">
+                        </picture>
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">{t("thai-solution-massage:items.3.heading")}</h3>
+                            <p class="cs-item-text">{t("thai-solution-massage:items.3.text")}</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-link">
+                        <picture class="cs-picture">
+                            <img class="cs-icon" src="/assets/svgs/treatments/5.svg" loading="lazy" decoding="async" alt="icon" width="40" height="40" aria-hidden="true">
+                        </picture>
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">{t("thai-solution-massage:items.4.heading")}</h3>
+                            <p class="cs-item-text">{t("thai-solution-massage:items.4.text")}</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-link">
+                        <picture class="cs-picture">
+                            <img class="cs-icon" src="/assets/svgs/treatments/6.svg" loading="lazy" decoding="async" alt="icon" width="40" height="40" aria-hidden="true">
+                        </picture>
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">{t("thai-solution-massage:items.5.heading")}</h3>
+                            <p class="cs-item-text">{t("thai-solution-massage:items.5.text")}</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<CTA />
+
+</BaseLayout>
+
+<style lang="less">
+  /* PAGE-SPECIFIC STYLES FOR THE CONTACT PAGE */
+
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-1259 {
+        padding: var(--sectionPadding);
+        /* prevents padding from affecting height and  */
+        box-sizing: border-box;
+
+        .cs-container {
+            /* changes to 1280px at desktop */
+            max-width: (940/16rem);
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+        }
+
+        .cs-title {
+            max-width: 20ch;
+        }
+
+        .cs-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+            position: relative;
+        }
+
+        .cs-image {
+            width: 100%;
+            max-width: (417/16rem);
+            height: auto;
+            display: none;
+            position: relative;
+
+            &:before {
+                /* gradient mask, change the rgba values to match the color of the background you chose for the section and change it for dark mode as well if you chose a different dark mode color scheme */
+                content: "";
+                width: 100%;
+                height: 40%;
+                background: -moz-linear-gradient(
+                    top,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 1) 100%
+                ); /* FF3.6-15 */
+                background: -webkit-linear-gradient(
+                    top,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 1) 100%
+                ); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(
+                    to bottom,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 1) 100%
+                );
+                opacity: 1;
+                position: absolute;
+                display: block;
+                bottom: -1px;
+                left: 0;
+            }
+        }
+
+        .cs-circle {
+            display: none;
+        }
+
+        .cs-card-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(12, 1fr);
+            gap: (20/16rem);
+        }
+
+        .cs-item {
+            list-style: none;
+            margin: 0;
+            box-sizing: border-box;
+            grid-column: span 12;
+            gap: (20/16rem);
+        }
+
+        .cs-link {
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: (20/16rem);
+
+            &:hover {
+                .cs-picture {
+                    transform: scale(1.2);
+                }
+
+                .cs-h3 {
+                    color: var(--primary);
+                }
+            }
+        }
+
+        .cs-picture {
+            width: (80/16rem);
+            height: (80/16rem);
+            box-sizing: border-box;
+            /* prevents border from affecting height and width */
+            background-color: #f9f1d3;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            /* prevents flexbox from squishing it */
+            flex: none;
+            transition: transform 0.3s;
+        }
+
+        .cs-icon {
+            width: (36/16rem);
+            height: auto;
+            display: block;
+        }
+
+        .cs-h3 {
+            font-size: (20/16rem);
+            line-height: 1.5em;
+            margin: 0;
+            margin-bottom: (8/16rem);
+            color: var(--headerColor);
+            text-align: inherit;
+            transition: color 0.3s;
+        }
+
+        .cs-item-text {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            margin: 0;
+            color: var(--bodyTextColor);
+            text-align: inherit;
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            font-weight: 700;
+            min-width: (150/16rem);
+            margin: 0;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+            padding: 0 (24/16rem);
+            color: #fff;
+            background-color: var(--primary);
+            overflow: hidden;
+            border-radius: (4/16rem);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+
+            &:before {
+                content: "";
+                width: 0%;
+                height: 100%;
+                background: #000;
+                opacity: 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/* Tablet - 1768px */
+@media only screen and (min-width: 48rem) {
+    #services-1259 {
+        .cs-item {
+            grid-column: span 4;
+        }
+
+        .cs-link {
+            text-align: left;
+            align-items: flex-start;
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #services-1259 {
+        .cs-container {
+            max-width: (1280/16rem);
+        }
+
+        .cs-image {
+            width: 40vw;
+            max-width: (417/16rem);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            img {
+                width: 100%;
+                height: 100%;
+                max-height: (468/16rem);
+                object-fit: contain;
+            }
+        }
+
+        .cs-circle {
+            /* 600px - 724px */
+            width: clamp(600px, 55vw, 724px);
+            height: auto;
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: (32/16rem);
+            transform: translateX(-50%);
+
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+
+        .cs-card-group {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            /* 342px - 384px */
+            column-gap: clamp(20.375rem, 21vw, 24rem);
+            row-gap: (32/16rem);
+        }
+
+        .cs-item {
+            width: 32vw;
+            max-width: (422/16rem);
+            margin: 0;
+            position: relative;
+
+            &:nth-of-type(odd) {
+                .cs-link {
+                    text-align: right;
+                    align-items: flex-end;
+                }
+            }
+
+            &:nth-of-type(3) {
+                padding-right: (100/16rem);
+            }
+
+            &:nth-of-type(4) {
+                padding-left: (100/16rem);
+            }
+        }
+
+        .cs-link {
+            align-items: flex-start;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #services-1259 {
+            
+            .cs-text,
+            .cs-item-text {
+                opacity: 0.8;
+            }
+
+            .cs-picture {
+                background-color: var(--accent);
+            }
+
+            .cs-image {
+                &:before {
+                    background: -moz-linear-gradient(
+                        top,
+                        rgba(255, 255, 255, 0) 0%,
+                        rgba(43, 18, 5, 1) 100%
+                    ); /* FF3.6-15 */
+                    background: -webkit-linear-gradient(
+                        top,
+                        rgba(255, 255, 255, 0) 0%,
+                        rgba(43, 18, 5, 1) 100%
+                    ); /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(
+                        to bottom,
+                        rgba(255, 255, 255, 0) 0%,
+                        rgba(43, 18, 5, 1) 100%
+                    );
+                }
+            }
+
+            .cs-icon {
+                /* turns it white */
+                filter: grayscale(1) brightness(1000%);
+            }
+
+            .cs-title,
+            .cs-text,
+            .cs-h3,
+            .cs-item-text {
+                color: var(--bodyTextColorWhite);
+            }
+        }
+    }
+}                 
+
+</style>

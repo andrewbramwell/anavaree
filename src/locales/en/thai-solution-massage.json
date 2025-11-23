@@ -1,0 +1,37 @@
+{
+    "description": "Personalized therapeutic treatment on a massage table. Benjapakee system integrating muscular, nervous, joint, and spiritual healing.",
+    "landing": "Thai Solution Massage",
+    "topper": "Ancient Wisdom",
+    "title": "The Philosophy of Thai Solution Massage",
+    "p1": "Thai Solution Massage is an ancient art that doesn't rely on rigid definitions or written theories, but rather on wisdom passed down through generations by Thai masters.",
+    "p2": "According to tradition, the tendons and ligaments connecting different parts of the human body serve as natural indicators, revealing individual symptoms and imbalances. These \"lines\" represent the key to understanding the body's state of health and identifying the most effective therapeutic pathways.",
+    "p3": "Beneath these lines lie the main energy channels, also called \"Sen\" in Thai tradition. These channels form the centre of the nervous system and are fundamental to the body's overall wellbeing.",
+    "p4": "Through an effective massage technique that uses appropriate pressure and body weight, it's possible to stimulate nerves and deep tissues, promote profound relaxation, help problematic areas of the body regenerate, and restore the body's natural balance.",
+    "p5": "Our approach combines ancient wisdom with a deep understanding of each client's individual needs, offering an authentic and personalised therapeutic experience.",
+    "items": {
+        "0": {
+            "heading": "Migraines and Tension Headaches",
+            "text": "Specialized techniques to relieve cervical and cranial tension, reducing the frequency and intensity of migraines and stress-related headaches."
+        },
+        "1": {
+            "heading": "Epicondylitis (Tennis Elbow)",
+            "text": "Targeted treatment to reduce forearm tendon inflammation and restore pain-free elbow mobility."
+        },
+        "2": {
+            "heading": "Muscular Pain and Contractures",
+            "text": "Deep manipulation to release chronic muscular contractures, improve circulation, and restore natural flexibility."
+        },
+        "3": {
+            "heading": "Knee Arthritis",
+            "text": "Gentle techniques to reduce joint stiffness, improve mobility, and alleviate pain associated with cartilage wear."
+        },
+        "4": {
+            "heading": "Calf Cramps",
+            "text": "Therapeutic massage to relax calf muscles, improve circulation, and prevent recurring cramps."
+        },
+        "5": {
+            "heading": "Plantar Fasciitis",
+            "text": "Specific treatment to reduce plantar tissue inflammation, relieve heel pain, and restore proper foot function."
+        }
+    }
+}

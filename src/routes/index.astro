@@ -6,18 +6,21 @@ import { getOptimizedImage } from "@utils/utils";
 import client from "@data/client.json";
 
 // Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Hero (for rendering)
-import landingImage from "@assets/images/hero.jpg"; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
-import mobileLandingImage from "@assets/images/hero-m.jpg"; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
-const optimizedLandingImage = await getOptimizedImage(landingImage);
-const optimizedMobileLandingImage = await getOptimizedImage(mobileLandingImage);
+import landingImage from "@assets/images/hero.jpg";
+import mobileLandingImage from "@assets/images/hero-m.jpg";
+const optimizedHeroImage = await getOptimizedImage(landingImage);
+const optimizedMobileHeroImage = await getOptimizedImage(mobileLandingImage);
+
 
 // Import and optimize massage service images
 import massageImage5 from "@assets/images/massage5.jpg";
 import massageImage6 from "@assets/images/massage6.jpg";
 import massageImage3 from "@assets/images/massage3.jpg";
+import massageImage10 from "@assets/images/massage10.jpg";
 const optimizedMassageImage5 = await getOptimizedImage(massageImage5);
 const optimizedMassageImage6 = await getOptimizedImage(massageImage6);
 const optimizedMassageImage3 = await getOptimizedImage(massageImage3);
+const optimizedMassageImage10 = await getOptimizedImage(massageImage10);
 
 // Import and optimize Why Us section images
 import whyImage1 from "@assets/images/why1.jpg";
@@ -67,7 +70,11 @@ const optimizedFaqImage = await getOptimizedImage(faqImage);
 
 ---
 
-<BaseLayout title={t("home:layout.title")} description={t("home:layout.description")} preloadedImage={optimizedMobileLandingImage}>
+<BaseLayout 
+  title={t("home:layout.title")} 
+  description={t("home:layout.description")} 
+  preloadedImage={optimizedMobileHeroImage}
+>
 <!-- ============================================ -->
 <!--                    Hero                      -->
 <!-- ============================================ -->
@@ -84,12 +91,12 @@ const optimizedFaqImage = await getOptimizedImage(faqImage);
             <a href={client.bookingLink} target="_blank" rel="noopener" class="cs-button-solid">{t("home:hero.cta1")}</a>
         </div>
         <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset={optimizedMobileLandingImage.src} />
-            <!--Tablet and above Image-->
-            <source media="(min-width: 601px)" srcset={optimizedLandingImage.src} />
-            <img loading="lazy" decoding="async" src={optimizedLandingImage.src} alt="wedding couple" width={optimizedLandingImage.attributes.width} height={optimizedLandingImage.attributes.height}>
-        </picture>
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset={optimizedMobileHeroImage.src} />
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset={optimizedHeroImage.src} />
+        <img loading="lazy" decoding="async" src={optimizedHeroImage.src} alt="Thai massage therapy" width={optimizedHeroImage.attributes.width} height={optimizedHeroImage.attributes.height} />
+    </picture>
     </div>
 </section>
 
@@ -297,6 +304,32 @@ const optimizedFaqImage = await getOptimizedImage(faqImage);
                 {t("home:sideBySide.text2")}
             </p>
             <a href={getLocalePath("/about")} class="cs-button-solid">{t("home:sideBySide.cta")}</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+<section id="sbs-867">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset={optimizedMassageImage10.src}>
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset={optimizedMassageImage10.src}>
+            <img loading="lazy" decoding="async" src={optimizedMassageImage10.src} alt="therapy" width={optimizedMassageImage10.attributes.width} height={optimizedMassageImage10.attributes.height}>
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">{t("home:featuredService1.topper")}</span>
+            <h2 class="cs-title">{t("home:featuredService1.title")}</h2>
+            <p class="cs-text">
+                {t("home:featuredService1.text1")}
+            </p>
+            <p class="cs-text">
+                {t("home:featuredService1.text2")}
+            </p>
+            <a href={getLocalePath("/thai-solution-massage")} class="cs-button-solid">{t("home:featuredService1.cta")}</a>
         </div>
     </div>
 </section>
@@ -1338,6 +1371,125 @@ for (const item of faqItems) {
 }
 
 /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbs-867 {
+        padding: var(--sectionPadding);
+        background-color: var(--sectionColor);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at desktop */
+            max-width: (550/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 7vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text aling to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: (542/16rem);
+            /* prevents padding from affecting width and height */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-title {
+            /* 17 characters wide including spaces */
+            max-width: 17ch;
+        }
+
+        .cs-text {
+            margin-bottom: (16/16rem);
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+        }
+
+        .cs-picture {
+            display: block;
+            position: relative;
+            width: 100%;
+            max-width: (630/16rem);
+            /* 400px - 775px */
+            height: clamp(25rem, 70vw, 48.4375rem);
+            /* clips img tag corners */
+            overflow: hidden;
+            border-radius: (32/16rem);
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 64rem) {
+    #sbs-867 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            flex-direction: row;
+            max-width: (1280/16rem);
+            justify-content: space-between;
+        }
+
+        .cs-content {
+            width: 53%;
+            /* reset the padding, add the section padding back to the section container */
+            padding: 0;
+        }
+
+        .cs-picture {
+            width: 47vw;
+            position: relative;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #sbs-867 {
+            background-color: rgba(0, 0, 0, .3);
+            
+
+            .cs-title,
+            .cs-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text {
+                opacity: 0.8;
+            }
+
+            .cs-picture {
+                &:before {
+                    background-color: var(--accent);
+                }
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
 <---          Gallery           -->
 <--- -------------------------- -*/
 
@@ -1345,7 +1497,7 @@ for (const item of faqItems) {
 @media only screen and (min-width: 0rem) {
     #gallery-402 {
         padding: var(--sectionPadding);
-        background-color: #F8F5F1;
+        padding-bottom: 0;
 
         .cs-container {
             width: 100%;
