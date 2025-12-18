@@ -1,11 +1,15 @@
 ---
 import clientData from '@data/client.json';
 
-const { currentLocale } = Astro;
-const lang = currentLocale || 'de';
+// Get locale from URL path instead of Astro.currentLocale
+const pathname = Astro.url.pathname;
+const lang = pathname.startsWith('/en/') || pathname === '/en' ? 'en' : 'de';
 
-// Get schema for current language, fallback to 'de' if language not found
-const schema = clientData.schema?.[lang] || clientData.schema?.['de'] || clientData.schema;
+console.log('Pathname:', pathname);
+console.log('Detected lang:', lang);
+
+// Get schema for current language
+const schema = clientData.schema?.[lang] || clientData.schema.de;
 ---
 
 {schema?.business && (
