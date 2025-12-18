@@ -1,0 +1,17 @@
+---
+import clientData from '@data/client.json';
+
+const { currentLocale } = Astro;
+const lang = currentLocale || 'de';
+
+// Get schema for current language, fallback to 'de' if language not found
+const schema = clientData.schema?.[lang] || clientData.schema?.['de'] || clientData.schema;
+---
+
+{schema?.business && (
+	<script type="application/ld+json" set:html={JSON.stringify(schema.business)} />
+)}
+
+{schema?.website && (
+	<script type="application/ld+json" set:html={JSON.stringify(schema.website)} />
+)}

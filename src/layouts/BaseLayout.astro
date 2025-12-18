@@ -11,6 +11,7 @@ import ThemeProvider from "@components/TemplateComponents/ThemeProvider.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import CookiePopup from "@components/CookiePopup.astro";
+import Schema from '@components/Schema.astro';
 import "@styles/root.less";
 
 interface Props {
@@ -98,6 +99,8 @@ const isLandingPage = Astro.url.pathname === "/" || trimmedLocales.includes(trim
 
 		<!-- Navigation script -->
 		<script src="@assets/js/nav.js"></script>
+		<!-- Schema Markup -->
+	<Schema />
 	</head>
 	<body>
 		<!--Screen reader skip main nav-->

@@ -3,7 +3,7 @@
 	"email": "anavareemassage@gmail.com",
 	"phoneForTel": "+493071056894",
 	"phoneFormatted": "+49 (0)30 7105 6894",
-	"openingHours": "",
+	"openingHours": "Mo-Su: 10am-8pm",
 	"bookingLink": "https://anavareethaimassage.setmore.com/",
 	"address": {
 		"lineOne": "Brandenburgische Str. 74",
@@ -13,5 +13,95 @@
 		"zip": "10713",
 		"mapLink": "https://maps.app.goo.gl/QFfiUMEEPJZKKp3X6"
 	},
-	"domain": "anavareethaimassage.de"
+	"domain": "anavareethaimassage.de",
+	"schema": {
+		"de": {
+			"business": {
+				"@context": "https://schema.org",
+				"@type": "HealthAndBeautyBusiness",
+				"@id": "https://anavareethaimassage.de/#business",
+				"name": "Anavaree Thai Massage",
+				"image": "https://anavareethaimassage.de/assets/svgs/logo.svg",
+				"url": "https://anavareethaimassage.de",
+				"telephone": "+493071056894",
+				"email": "anavareemassage@gmail.com",
+				"priceRange": "€€",
+				"description": "Authentische Thai-Massage in Wilmersdorf, Berlin von zertifizierter Therapeutin Khun Pui. Traditionelle Heilkunst der Wat Po Schule.",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "Brandenburgische Str. 74",
+					"addressLocality": "Berlin",
+					"addressRegion": "Wilmersdorf",
+					"postalCode": "10713",
+					"addressCountry": "DE"
+				},
+				"geo": {
+					"@type": "GeoCoordinates",
+					"latitude": "52.4880",
+					"longitude": "13.3197"
+				},
+				"openingHoursSpecification": {
+					"@type": "OpeningHoursSpecification",
+					"dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+					"opens": "10:00",
+					"closes": "20:00"
+				}
+			},
+			"website": {
+				"@context": "https://schema.org",
+				"@type": "WebSite",
+				"@id": "https://anavareethaimassage.de/#website",
+				"url": "https://anavareethaimassage.de",
+				"name": "Anavaree Thai Massage",
+				"inLanguage": "de",
+				"publisher": {
+					"@id": "https://anavareethaimassage.de/#business"
+				}
+			}
+		},
+		"en": {
+			"business": {
+				"@context": "https://schema.org",
+				"@type": "HealthAndBeautyBusiness",
+				"@id": "https://anavareethaimassage.de/#business",
+				"name": "Anavaree Thai Massage",
+				"image": "https://anavareethaimassage.de/assets/svgs/logo.svg",
+				"url": "https://anavareethaimassage.de/en",
+				"telephone": "+493071056894",
+				"email": "anavareemassage@gmail.com",
+				"priceRange": "€€",
+				"description": "Authentic Thai massage in Wilmersdorf, Berlin by certified therapist Khun Pui. Traditional healing arts from Wat Po School.",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "Brandenburgische Str. 74",
+					"addressLocality": "Berlin",
+					"addressRegion": "Wilmersdorf",
+					"postalCode": "10713",
+					"addressCountry": "DE"
+				},
+				"geo": {
+					"@type": "GeoCoordinates",
+					"latitude": "52.4880",
+					"longitude": "13.3197"
+				},
+				"openingHoursSpecification": {
+					"@type": "OpeningHoursSpecification",
+					"dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+					"opens": "10:00",
+					"closes": "20:00"
+				}
+			},
+			"website": {
+				"@context": "https://schema.org",
+				"@type": "WebSite",
+				"@id": "https://anavareethaimassage.de/en/#website",
+				"url": "https://anavareethaimassage.de/en",
+				"name": "Anavaree Thai Massage",
+				"inLanguage": "en",
+				"publisher": {
+					"@id": "https://anavareethaimassage.de/#business"
+				}
+			}
+		}
+	}
 }

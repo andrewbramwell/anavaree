@@ -11,8 +11,8 @@ export default defineConfig({
       defaultLocale: "de",
       locales: ["de", "en"],
       client: {
-        data: false,    // ← Changed: Removes locale data from HTML
-        paths: false,   // ← Changed: Removes route mappings from HTML
+        data: true,     // ← Required: minimal client data
+        paths: false,   // ← Disabled: removes route mappings (the biggest bloat)
       },
       pages: {
         "/about": {
@@ -32,7 +32,7 @@ export default defineConfig({
         },
         "/privacy-policy": {
           en: "/privacy-policy",
-        }
+        },
       },
     }),
     sitemap({
