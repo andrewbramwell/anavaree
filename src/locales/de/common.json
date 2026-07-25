@@ -65,6 +65,10 @@
         "policyLink": "/privacy-policy",
         "accept": "Akzeptieren"
     },
+    "promoPopup": {
+        "alt": "Sonderangebot bei Anavaree Thai Massage",
+        "close": "Schließen"
+    },
     "notFound": {
         "pageNotFound": "404 - Die gesuchte Seite existiert nicht.",
         "linkText": "Zurück zur Startseite"

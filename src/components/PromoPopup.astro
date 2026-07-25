@@ -1,0 +1,138 @@
+---
+// src/components/PromoPopup.astro
+import { t } from "i18n:astro";
+import client from "@data/client.json";
+---
+
+<!-- ============================================ -->
+<!--                Promo Popup                   -->
+<!-- ============================================ -->
+
+<div id="popup-3081">
+    <div class="cs-overlay"></div>
+    <div class="cs-container">
+        <button class="cs-close" aria-label={t("promoPopup.close")}>
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/cookie-close.svg" alt="" width="16" height="16" />
+        </button>
+        <a class="cs-link" href={client.bookingLink} target="_blank" rel="noopener">
+            <img class="cs-image" loading="lazy" decoding="async" src="/assets/images/popup.webp" alt={t("promoPopup.alt")} width="1254" height="1254" />
+        </a>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const popup = document.getElementById('popup-3081');
+        const overlay = popup.querySelector('.cs-overlay');
+        const closeButton = popup.querySelector('.cs-close');
+
+        if (!sessionStorage.getItem('promoPopupSeen')) {
+            popup.style.display = "block";
+
+            setTimeout(function () {
+                popup.classList.add('cs-show');
+            }, 1500);
+        }
+
+        function closePopup() {
+            popup.classList.remove('cs-show');
+            sessionStorage.setItem('promoPopupSeen', 'true');
+
+            setTimeout(function () {
+                popup.style.display = "none";
+            }, 300);
+        }
+
+        closeButton.addEventListener('click', closePopup);
+        overlay.addEventListener('click', closePopup);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && popup.classList.contains('cs-show')) {
+                closePopup();
+            }
+        });
+    });
+</script>
+
+<style lang="less">
+
+/*-- -------------------------- -->
+<---       Promo Popup          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #popup-3081 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10500;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s;
+
+        &.cs-show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .cs-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .cs-container {
+            width: 100%;
+            max-width: (400/16rem);
+            padding: 0 1rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -46%);
+            transition: transform 0.3s;
+        }
+
+        &.cs-show .cs-container {
+            transform: translate(-50%, -50%);
+        }
+
+        .cs-close {
+            width: (32/16rem);
+            height: (32/16rem);
+            margin: 0 0 (8/16rem) auto;
+            padding: 0;
+            background-color: var(--sectionColor);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s;
+
+            &:hover {
+                cursor: pointer;
+                transform: rotate(90deg);
+            }
+        }
+
+        .cs-link {
+            display: block;
+            line-height: 0;
+        }
+
+        .cs-image {
+            width: 100%;
+            height: auto;
+            border-radius: (16/16rem);
+        }
+    }
+}
+
+</style>
